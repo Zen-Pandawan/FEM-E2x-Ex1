@@ -1,7 +1,8 @@
-<h1>Orgs</h1>
+<h1>Orgs List</h1>
 <ul>
     {{#each model as |org|}}
-        <li>{{org}}</li>
+        <li>{{org.name}}</li>
+        
     {{/each}}
 </ul>
 {{outlet}}
