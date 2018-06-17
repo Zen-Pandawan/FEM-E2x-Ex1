@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-
+//Index for Home
 export default Route.extend({
     beforeModel(){
         this._super(...arguments);//call super by habit
