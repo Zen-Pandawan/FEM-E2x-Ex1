@@ -1,14 +1,14 @@
 <h1>Orgs List</h1>
 <ul>
     {{#each model as |org|}}
-        <li>{{org.name}}</li>
-        
+    <li>{{org.name}}</li>
+
     {{/each}}fb net yah ember
 
-<li>{{link-to 'Facebook' 'org.repos' 'facebook'}} </li>
-<li>{{link-to 'Netflix' 'org.repos' 'netflix'}} </li>
-<li>{{link-to 'Yahoo' 'org.repos' 'yahoo'}} </li>
-<li>{{link-to 'Ember' 'org.repos' 'emberjs'}} </li>
-    
+    <li>{{link-to 'Facebook' 'org' 'facebook'}} </li>
+    <li>{{link-to 'Netflix' 'org' 'netflix'}} </li>
+    <li>{{link-to 'Yahoo' 'org' 'yahoo'}} </li>
+    <li>{{link-to 'Ember' 'org' 'emberjs'}} </li>
+
 </ul>
 {{outlet}}
