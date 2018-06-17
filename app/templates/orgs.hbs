@@ -1,7 +1,7 @@
 <h1>Orgs List</h1>
 <ul>
     {{#each model as |org|}}
-    <li>{{org.name}}</li>
+    <li>{{link-to org.name 'org' org.name}}</li>
 
     {{/each}}fb net yah ember
 
