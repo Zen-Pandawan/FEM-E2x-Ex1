@@ -1,7 +1,9 @@
 <h1>Orgs List</h1>
 <ul>
     {{#each model as |org|}}
-    <li>{{link-to org.name 'org' org.name}}</li>
+    <li>{{link-to org.name 'org' org.name}}
+        <span {{action 'favouriteClicked' org}} >[ Favourite ]</span>
+    </li>
 
     {{/each}}fb net yah ember
 

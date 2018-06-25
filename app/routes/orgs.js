@@ -1,6 +1,15 @@
-import Route from '@ember/routing/route';
+import Route from '@ember/routing/route'; 
+import {inject as service} from '@ember/service'; 
 
 export default Route.extend({
+    favourites: service(),
+
+    actions:{
+        favouriteClicked(org){
+            this.get('favourites').favouriteItem(org);
+        }
+    },
+
     model(){
         return [
             {'id': '1', 'name': 'Facebook'},
