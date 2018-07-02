@@ -8,7 +8,7 @@ export default Route.extend({
             //backup github numeric ID
             rawOrg.oldId = rawOrg.id;
             //use repo name as our app's ID for the model.
-            rawOrg.id = rawOrg.name;
+            rawOrg.id = rawOrg.login;
             //debugger;
             return rawOrg;
         });
