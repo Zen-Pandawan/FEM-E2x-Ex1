@@ -12,7 +12,6 @@ Router.map(function() {
   
   //INDIVIDUAL ORG
   this.route('org', {path: 'org/:id'}, function() {
-
     //LIST OF REPOS
     this.route('repos');
 
@@ -21,7 +20,8 @@ Router.map(function() {
       this.route('contributors');
       this.route('issues');
     });
-    
+
+    this.route('notfound');
   });
 
   //404 Default
