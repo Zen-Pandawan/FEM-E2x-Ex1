@@ -15,7 +15,7 @@ export default Route.extend({
             {'id': '1', 'name': 'Facebook'},
             {'id': '2', 'name': 'Netflix'},
             {'id': '3', 'name': 'Yahoo'},
-            {'id': '4', 'name': 'Emberjs'}
+            {'id': '4', 'name': 'Ember-cli'}
             
             // 'Facebook',
             // 'Netflix',
