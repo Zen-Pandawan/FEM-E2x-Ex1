@@ -9,7 +9,6 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
-    'plugin:ember-best-practices/recommended',
     'plugin:ember/recommended'
   ],
   env: {

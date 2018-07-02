@@ -1,7 +1,9 @@
 <ul>
-    <li>{{link-to 'React' 'org.repo.issues' 'react'}}</li>
-    <li>{{link-to 'Relay' 'org.repo.issues' 'relay'}}</li>
-    <li>{{link-to 'Watchman' 'org.repo.issues' 'watchman'}}</li>
-    <li>{{link-to 'React-native' 'org.repo.issues' 'react-native'}}</li>
+    {{#each model as |repo|}}
+    <li>
+        {{link-to repo.id 'org.repo.issues' repo.id}}
+    </li>
+    {{/each}}
 </ul>
+
 {{outlet}}
