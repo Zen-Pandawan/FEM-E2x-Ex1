@@ -7,7 +7,11 @@ export default Route.extend({
     actions:{
         favouriteClicked(org){
             this.get('favourites').favouriteItem(org);
+        },
+        socialExpansionToggled(){
+            console.log("EXPANSION TOGGLED!")
         }
+
     },
 
     model(){
