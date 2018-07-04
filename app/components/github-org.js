@@ -6,5 +6,8 @@ export default Component.extend({
             console.log('clicked star');
             this.sendAction('action', org);
         }
-    }
+    },
+
+    tagName: 'li',
+    classNames: ['gh-repo-component']
 });
