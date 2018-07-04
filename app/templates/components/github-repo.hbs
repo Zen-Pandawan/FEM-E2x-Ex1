@@ -1,0 +1,14 @@
+<div class="gh-repo-component">
+    {{#unless gh-link-route}}
+        {{gh-repo.id}}
+    {{/unless}}
+    
+    {{#if gh-link-route}}
+        {{link-to gh-repo.id gh-link-route gh-repo.id}}    
+    {{/if}}
+    
+    {{#if gh-action-title}}
+            <button {{action 'buttonClick' gh-repo}} >{{gh-action-title}}</button>
+        {{/if}}
+</div>
+{{yield}}
