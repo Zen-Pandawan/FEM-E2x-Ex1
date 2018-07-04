@@ -10,7 +10,7 @@ export default Route.extend({
             return rawRepos.map(rawRepo => {
                 rawRepo.oldId = rawRepo.id;
                 rawRepo.id = rawRepo.name;
-                return rawRepo;
+                return rawRepo; 
             });
         });
     }

@@ -1,14 +1,24 @@
-<div class="gh-repo-component">
+
+<span class="gh-repo-name">
     {{#unless gh-link-route}}
-        {{gh-repo.id}}
+        {{gh-repo-data.id}}
     {{/unless}}
     
     {{#if gh-link-route}}
-        {{link-to gh-repo.id gh-link-route gh-repo.id}}    
+        {{link-to gh-repo-data.id gh-link-route gh-repo-data.id}}    
     {{/if}}
-    
-    {{#if gh-action-title}}
-            <button {{action 'buttonClick' gh-repo}} >{{gh-action-title}}</button>
-        {{/if}}
-</div>
+</span>
+
+<small>
+    <span class="gh-repo-forks-count">
+        Forks: {{gh-repo-data.forks_count}}
+    </span>
+    <span class="gh-repo-watchers-count">
+       Watchers: {{gh-repo-data.watchers_count}}
+    </span>
+</small>
+{{#if gh-action-title}}
+    <button {{action 'buttonClick' gh-repo-data}} >{{gh-action-title}}</button>
+{{/if}}
+
 {{yield}}

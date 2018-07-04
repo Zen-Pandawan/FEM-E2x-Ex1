@@ -1,14 +1,8 @@
-<ul>
-    {{#each model as |repo|}}
-    <li>
-        {{link-to repo.id 'org.repo.issues' repo.id}}
-    </li>
-    {{/each}}
-</ul>
+
 <div class="orgs-list">
     {{#each model as |repo|}}
         {{github-repo
-            gh-repo = repo
+            gh-repo-data = repo
             gh-link-route = 'org.repo.issues'            
         }}            
     {{/each}}
