@@ -1,15 +1,13 @@
-{{#unless link-route}}
-    {{org.name}}
-    {{#if action-title}}
-        <button {{action 'buttonClick' org}} >{{action-title}}</button>
+<div class="gh-org-component">
+    {{#unless link-route}}
+        {{org.name}}    
+    {{/unless}}
+    {{#if link-route}}
+        {{link-to org.name link-route org.name}}  
     {{/if}}
-{{/unless}}
-
-{{#if link-route}}
-    {{link-to org.name link-route org.name}}
+    
     {{#if action-title}}
-        <button {{action 'buttonClick' org}} >{{action-title}}</button>
-    {{/if}}
-{{/if}}
-
-{{yield}}
+            <button {{action 'buttonClick' org}} >{{action-title}}</button>
+        {{/if}}
+    {{yield}}
+</div>
