@@ -1,23 +1,29 @@
 <h1>Orgs List</h1>
-<ul>
-    {{#each model as |org|}}
-    <li>{{link-to org.name 'org' org.name}}
-        <span {{action 'favouriteClicked' org}} >[ Favourite ]</span>
-    </li>
 
+
+<div class="orgs-list">
+    {{#each model as |anorg|}}
+        {{github-org
+            org = anorg
+            link-route = 'org'
+            action = 'favouriteClicked'
+            action-title = '★'            
+        }}            
     {{/each}}
+</div>
 
-</ul>
 
-{{social-info 
-    name = 'Zen Panda'
-    twitter = 'ZPCoding'
-    github = 'Zen-Pandawan'
-    on-expansion-toggle='socialExpansionToggled'}}
-    
-{{social-info 
-    name = 'Sean Smith'
-    
-    github = 'Zen-Pandawan'}}
+<div>
+    {{social-info 
+        name = 'Zen Panda'
+        twitter = 'ZPCoding'
+        github = 'Zen-Pandawan'
+        on-expansion-toggle='socialExpansionToggled'}}
+        
+    {{social-info 
+        name = 'Sean Smith'
+        
+        github = 'Zen-Pandawan'}}
+</div>
 
 {{outlet}}
