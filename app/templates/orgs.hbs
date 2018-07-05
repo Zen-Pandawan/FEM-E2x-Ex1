@@ -4,10 +4,11 @@
 <div class="orgs-list">
     {{#each model as |anorg|}}
         {{github-org
-            org = anorg
-            link-route = 'org'
-            action = 'favouriteClicked'
-            action-title = '★'            
+            gh-org = anorg
+            gh-link-route = 'org'
+            gh-action = 'favouriteClicked'
+            gh-action-title = '★' 
+            gh-action-alt-title = '✩'           
         }}            
     {{/each}}
 </div>

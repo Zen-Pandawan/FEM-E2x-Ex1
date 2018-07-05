@@ -7,7 +7,12 @@ export default Route.extend({
     actions:{
         favouriteClicked(org){
             console.log('favourites clicked');
-            this.get('favourites').favouriteItem(org);
+            if (this.get('favourites.items').indexOf(org) < 0){
+                this.get('favourites').favouriteItem(org);
+            }else{
+                this.get('favourites').unfavouriteItem(org);
+            }
+            
         },
         socialExpansionToggled(){
             console.log("EXPANSION TOGGLED!")
